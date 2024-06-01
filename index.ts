@@ -16,7 +16,7 @@ const answer = await inquirer.prompt([
   {
     name: "userGuessedNumber",
     type: "number",
-    message: "Please guess a number: ",
+    message: "Please guess a number between 1-10: ",
   },
 ]);
 
@@ -26,4 +26,5 @@ if (answer.userGuessedNumber === randomNumber) {
   console.log(chalk.red("You guessed the wrong number!"));
 }
 
-console.log(randomNumber);
+console.log(`Random generated Number: ${randomNumber}`);
+console.log(`Your Guessed Number: ${answer.userGuessedNumber}`);
